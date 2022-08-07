@@ -1,0 +1,89 @@
+{
+	"info": {
+		"_postman_id": "ec4d65a9-d81b-4a3d-a9af-0cbbb48d0013",
+		"name": "User",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20223474"
+	},
+	"item": [
+		{
+			"name": "GetUserDetails",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJJZCI6Ijc3MmQ5OGFkLTMwNDctNGViYy04NDJhLTEyYjY4MjY4OTFjNCIsImVtYWlsIjoidXNlcjFAZ21haWwuY29tIiwic3ViIjoidXNlcjFAZ21haWwuY29tIiwianRpIjoiZDYyMjIxNzAtYmI3My00YTJhLTllNGMtMGQ1ZjIzZmZmYmRhIiwicm9sZSI6IlVzZXIiLCJuYmYiOjE2NTk3OTg5MTMsImV4cCI6MTY1OTc5ODk0MywiaWF0IjoxNjU5Nzk4OTEzfQ.MI-g-vYCvEQbte6i9h1LjXOIqe5D3MEshO-nbKB4Pu0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/api/user/GetUserDetails",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"user",
+						"GetUserDetails"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ChangeInformation",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6IlVzZXIxMiIsImVtYWlsIjoidXNlcjFAZ21haWwuY29tIiwicm9sZSI6IlVzZXIiLCJuYmYiOjE2NTk4ODQ1MDAsImV4cCI6MTY1OTg4NDU2MCwiaWF0IjoxNjU5ODg0NTAwLCJpc3MiOiJodHRwczovL2xvY2FsaG9zdDo0NDM3Ni8iLCJhdWQiOiJodHRwczovL2xvY2FsaG9zdDo0NDM3Ni8ifQ.mfLkZhsMjFQ0jNAxt5zT_NIMwvwkkCHQGMOO-4nXfBw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"user3@gmail.com\",\r\n    \"username\": \"User3\",\r\n    \"oldpassword\":\"User1@123\",\r\n    \"password\":\"User@123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/api/user/ChangeInformation",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"user",
+						"ChangeInformation"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

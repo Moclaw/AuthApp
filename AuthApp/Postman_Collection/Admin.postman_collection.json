@@ -1,0 +1,169 @@
+{
+	"info": {
+		"_postman_id": "2173b44f-9609-4b2c-9ce7-004f7173c27c",
+		"name": "Admin",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20223474"
+	},
+	"item": [
+		{
+			"name": "GetAllUser",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJJZCI6Ijc3MmQ5OGFkLTMwNDctNGViYy04NDJhLTEyYjY4MjY4OTFjNCIsImVtYWlsIjoidXNlcjFAZ21haWwuY29tIiwic3ViIjoidXNlcjFAZ21haWwuY29tIiwianRpIjoiZDYyMjIxNzAtYmI3My00YTJhLTllNGMtMGQ1ZjIzZmZmYmRhIiwicm9sZSI6IlVzZXIiLCJuYmYiOjE2NTk3OTg5MTMsImV4cCI6MTY1OTc5ODk0MywiaWF0IjoxNjU5Nzk4OTEzfQ.MI-g-vYCvEQbte6i9h1LjXOIqe5D3MEshO-nbKB4Pu0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/api/admin/GetAllUser",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"admin",
+						"GetAllUser"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetUserDetails",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6IkFkbWluIiwiZW1haWwiOiJhZG1pbkBnbWFpbC5jb20iLCJyb2xlIjoiQWRtaW4iLCJuYmYiOjE2NTk4ODUyMDUsImV4cCI6MTY1OTg4NTI2NSwiaWF0IjoxNjU5ODg1MjA1LCJpc3MiOiJodHRwczovL2xvY2FsaG9zdDo0NDM3Ni8iLCJhdWQiOiJodHRwczovL2xvY2FsaG9zdDo0NDM3Ni8ifQ.uTlRzublyyd1LlRH4VIGwPVBicjr6BOxH46w-2TUw8g",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/api/user/GetUserDetail",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"user",
+						"GetUserDetail"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteUser",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6IkFkbWluIiwiZW1haWwiOiJhZG1pbkBnbWFpbC5jb20iLCJyb2xlIjoiQWRtaW4iLCJuYmYiOjE2NTk4ODUyMDUsImV4cCI6MTY1OTg4NTI2NSwiaWF0IjoxNjU5ODg1MjA1LCJpc3MiOiJodHRwczovL2xvY2FsaG9zdDo0NDM3Ni8iLCJhdWQiOiJodHRwczovL2xvY2FsaG9zdDo0NDM3Ni8ifQ.uTlRzublyyd1LlRH4VIGwPVBicjr6BOxH46w-2TUw8g",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "userid",
+							"value": "9058ab90-e239-4fb8-89cb-95fbdc7b4cb5",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}/api/admin/DeleteUser",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"admin",
+						"DeleteUser"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Register",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Email\": \"user2@gmail.com\",\r\n    \"Username\":\"User2\",\r\n    \"Password\": \"User1@123\",\r\n    \"role\":\"User\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/api/auth/Register",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"auth",
+						"Register"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
