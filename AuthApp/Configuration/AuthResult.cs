@@ -9,11 +9,4 @@ namespace AuthApp.Configuration
         public bool Success { get; set; }
         public List<string> Errors { get; set; }
     }
-    public class JwtConfig
-    {
-        public string SecretKey { get; set; }
-        public string Audience { get; set; }
-        public string Issuer { get; set; }
-        public int ExpiryTimeInSeconds { get; set; }
-    }
 }

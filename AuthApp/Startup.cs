@@ -36,9 +36,12 @@ namespace AuthApp
             services.AddIdentity<IdentityUser, IdentityRole>(options =>
             options.SignIn.RequireConfirmedAccount = false)
                     .AddEntityFrameworkStores<ApplicationDbContext>().AddDefaultTokenProviders();
+            
             services.Configure<MailSettings>(Configuration.GetSection("MailSettings"));
+            
             services.AddTransient<IMailService, MailService>();
             services.AddTransient<IAuthServices, AuthServices>();
+            
             var key = Encoding.ASCII.GetBytes(Configuration["JwtConfig:SecretKey"]);
 
             services.AddAuthentication(options =>
